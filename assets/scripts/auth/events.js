@@ -221,40 +221,40 @@ const addHandlers = () => {
 
 
   // delete prints (data-id)
-  $('.delete-prints-btn').on('click', function (event) {
+  $('.delete-print-btn').on('click', function (event) {
      event.preventDefault();
-     let id = $(this).attr("data-prints-id");
+     let id = $(this).attr("data-print-id");
      api.deletePrint(ui.deletePrintSuccess, ui.failure, id);
    });
 
 
   //adds a prints id to the submit button
-  $('#admin').on('click', '.delete-prints', function(event){
+  $('#admin').on('click', '.delete-print', function(event){
     event.preventDefault();
-    let id = $(event.target).attr("data-prints-id");
-    $(".delete-prints-btn").attr("data-prints-id", id);
+    let id = $(event.target).attr("data-print-id");
+    $(".delete-print-btn").attr("data-print-id", id);
   });
 
 
   // update prints (data-id)
-  $('#update-prints').on('submit', function (event) {
+  $('#update-print').on('submit', function (event) {
     event.preventDefault();
-    let id = $(".update-prints-btn").attr("data-prints-id");
+    let id = $(".update-print-btn").attr("data-print-id");
     let data = getFormFields(this);
     api.updatePrint(ui.updatePrintSuccess, ui.failure, data, id);
   });
 
   //adds a job id to the submit button
-  $('#admin').on('click', '.update-prints', function(event){
+  $('#admin').on('click', '.update-print', function(event){
     event.preventDefault();
-    let id = $(event.target).attr("data-prints-id");
-    $(".update-prints-btn").attr("data-prints-id", id);
+    let id = $(event.target).attr("data-print-id");
+    $(".update-print-btn").attr("data-print-id", id);
   });
 
 
    //adds a prints id to the click button
-   $(".update-prints-btn").on('click', function () {
-   $("#update-prints-modal").hide();
+   $(".update-print-btn").on('click', function () {
+   $("#update-print-modal").hide();
    $(".modal-backdrop").hide();
    });
 
