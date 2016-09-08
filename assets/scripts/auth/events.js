@@ -151,7 +151,7 @@ const uploadPrints = function (){
   event.preventDefault();
   let data = new FormData(this);
     $.ajax({
-    url: 'https://fathomless-everglades-52108.herokuapp.com/prints',
+    url: 'https://floating-lowlands-70144.herokuapp.com//prints',
     method: 'POST',
     contentType: false,
     processData: false,
