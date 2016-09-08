@@ -40,14 +40,14 @@ const signOut = () => $.ajax({
 
 
 // show all prints on main page
-const getAllMonsters = () => $.ajax({
+const getAllPrints = () => $.ajax({
   url: app.api + '/prints/',
   method: 'GET',
 });
 
 
-// show single monster in modal
-const showMonster = (id) => $.ajax({
+// show single print in modal
+const showPrint = (id) => $.ajax({
   url: app.api + '/prints/' + id,
     method: 'GET',
 });
@@ -67,8 +67,8 @@ const getAllPictures = (success, failure) => {
 };
 
 
-// delete monster
-const deleteMonster = (success, failure, id) => {
+// delete prints
+const deletePrint = (success, failure, id) => {
   $.ajax({
     url: app.api + '/prints/' + id,
     method: 'DELETE',
@@ -81,8 +81,8 @@ const deleteMonster = (success, failure, id) => {
 };
 
 
-// update monster
-const updateMonster = (success, failure, data, id) => {
+// update prints
+const updatePrint = (success, failure, data, id) => {
   $.ajax({
     method: "PATCH",
     url: app.api + '/prints/' + id,
@@ -100,9 +100,9 @@ module.exports = {
   signIn,
   changePassword,
   signOut,
-  getAllMonsters,
-  showMonster,
+  getAllPrints,
+  showPrint,
   getAllPictures,
-  deleteMonster,
-  updateMonster
+  deletePrint,
+  updatePrint
 };
