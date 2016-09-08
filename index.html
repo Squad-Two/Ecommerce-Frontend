@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Monster for hire</title>
+
+      <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
+      <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet">
+    </head>
+    <body class="container-fluid background">
+
+        <nav class="navbar navbar-inverse">
+           <div class="container-fluid">
+             <!-- Brand and toggle get grouped for better mobile display -->
+             <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand"><b>Monster e-commerce</b></a>
+             </div>
+
+             <!-- Collect the nav links, forms, and other content for toggling -->
+             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+               <ul class="nav navbar-nav navbar-right">
+
+                 <li><a id="sign-up-modal-link" href="#">Sign Up</a></li>
+
+                 <li><a class="sign-in-trigger" id="sign-in-modal-link" href="#">Sign In</a></li>
+
+                 <li><a class="change-password-trigger" id="change-password-modal-link" href="#">Change Password</a></li>
+
+                 <li><a class="sign-out-trigger" id="sign-out-modal-link" href="#">Sign Out</a></li>
+                 <li><a class="cart-trigger" id="cart-modal-link" href="#">Cart</a></li>
+                 <li><a class="orders-trigger" id="orders-modal-link" href="#">Previous orders</a></li>
+
+               </ul>
+             </div><!-- /.navbar-collapse -->
+           </div><!-- /.container-fluid -->
+         </nav>
+
+
+
+<!--  SIGN-UP MODAL -->
+          <div class="container">
+            <div id="sign-up-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+              <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Sign up</h4>
+                  </div>
+                  <div class="modal-body">
+                    <form id="sign-up">
+                      <fieldset>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email address</label>
+                          <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="email" name="credentials[email]" id="sign-up-email">
+                        </div>
+
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control" placeholder="password" name="credentials[password]" id="sign-up-password" >
+                        </div>
+
+
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Confirm password</label>
+                          <input type="password" class="form-control" placeholder="confirm password" name="credentials[password_confirmation]"  id="user-password-confirm" >
+                        </div>
+                        <br>
+
+
+                        </br>
+                        <button type="submit" id="sign-up1" class="btn btn-warning sign-up-submit" name="submit" >Sign Up</button>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- END SIGN-UP MODAL -->
+
+
+
+<!--  SIGN-IN MODAL -->
+           <div class="container">
+             <div id="sign-in-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+               <div class="modal-dialog modal-sm" role="document">
+                 <div class="modal-content">
+                   <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                     <h4 class="modal-title">Sign In</h4>
+                   </div>
+                   <div class="modal-body">
+                     <form id="sign-in">
+                       <fieldset>
+                         <div class="form-group">
+                           <label for="exampleInputEmail1">Email address</label>
+                           <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="email" name="credentials[email]" id="sign-up-email">
+                         </div>
+                         <div class="form-group">
+                           <label for="exampleInputPassword1">Password</label>
+                           <input type="password" class="form-control" placeholder="password" name="credentials[password]" id="sign-up-password" >
+                           <br>
+                         </div>
+                         <button type="submit" id="sign-in1" class="btn btn-warning sign-up-submit" name="submit" >Sign In</button>
+                       </fieldset>
+                     </form>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+ <!-- END SIGN-UP MODAL -->
+
+
+
+<!--  CHANGE PASSWORD MODAL -->
+            <div class="container">
+              <div id="change-password-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-sm" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title">Change password</h4>
+                    </div>
+                    <div class="modal-body">
+                      <form id="change-password">
+                        <fieldset>
+                          <div class="form-group">
+                             <div class="form-group">
+                               <label for="exampleInputPassword1">Old Password</label>
+                               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="old password"  name="passwords[old]" >
+                             </div>
+                             <div class="form-group">
+                               <label for="exampleInputPassword1">New Password</label>
+                               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="new password" name="passwords[new]">
+                             </div>
+                           </div>
+
+                          <button type="submit" id="change-password1" class="btn btn-warning sign-up-submit" name="submit" >Change password</button>
+                        </fieldset>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+<!-- END SIGN-UP MODAL -->
+
+
+
+<!--  SIGN OUT MODAL -->
+           <div class="container">
+             <div id="sign-out-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+               <div class="modal-dialog modal-sm" role="document">
+                 <div class="modal-content">
+                   <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                     <h4 class="modal-title">Are you sure?</h4>
+                   </div>
+                   <div class="modal-body">
+                     <form id="sign-out">
+                       <fieldset class="sign-out-btn">
+                         <div class="form-group">
+                           <button type="submit" id="sign-out1" class="btn btn-warning sign-up-submit" name="submit" >Sign out</button>
+                         </div>
+                       </fieldset>
+                     </form>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+<!-- END SIGN-OUT MODAL -->
+
+
+
+
+    <div class="jumbotron">
+      <h1 class="display-3 site-title">Monster For Hire</h1>
+      <p class="lead title-description">This a place for parents to scare the discipline into their children.</p>
+    </div>
+
+
+
+<!-- HANDLEBARS FOR MONSTERS -->
+            <div class="fluid-container">
+             <!-- <div class="content" id="content"> -->
+               <div id="monsters">
+
+               </div>
+             <!-- </div> -->
+           </div>
+<!-- END OF HANDLEBARS FOR MONSTERS -->
+
+
+
+          <!-- cart modal -->
+          <div class="container">
+          <div class="modal fade" id="item" tabindex="-1" role="dialog" aria-labelledby="itemLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="show-item">
+                      <form id="item-add">
+                        <fieldset>
+                          <p>ITEMS</p>
+                        </fieldset>
+                      </form>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <p style="display: none" class="item-added">Item added to cart!</p>
+                    <p style="display: none" class="invalid">You must select a quantity greater than zero!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of cart modal -->
+
+
+
+
+          <!-- cart modal -->
+          <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="cartLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="cartLabel">Shopping Cart</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="show-cart">
+                      <div class="row cart-row">
+                        <div class="col-md-3">
+                          <h5>Item</h5>
+                        </div>
+                        <div class="col-md-3">
+                          <h5>Price</h5>
+                        </div>
+                        <div class="col-md-3">
+                          <h5>Quantity</h5>
+                        </div>
+                        <div class="col-md-3">
+                          <h5>Delete</h5>
+                        </div>
+                        <br>
+                      </div>
+                      <div class="cart-items">
+                      </div>
+                      <h3 class="no-items">Your Cart is Empty!</h3>
+                      <h5>Total: </h5>
+                      <script src="https://checkout.stripe.com/checkout.js"></script>
+                      <button style="display: none" type="button" class="btn btn-default create-order" id="save-order-button">Save for later</button>
+                      <button style="display: none" type="button" class="btn btn-default checkout" id="checkout-button">Checkout</button>
+                      <h3 class="sign-in-warn">You must be signed in to complete this order</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <!-- orders modal -->
+            <div class="container">
+            <div class="modal fade" id="orders-modal" tabindex="-1" role="dialog" aria-labelledby="itemLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Previous Orders</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div id="previous-orders"></div>
+                      <button type="button" data-dismiss="modal">Close</button>
+                    </div>
+                 </div>
+              </div>
+             </div>
+          </div>
+
+
+           <!-- admin panel -->
+           <div id="admin">
+             <div id="all-monsters">
+           </div>
+
+
+            <form id="multipart-form-data" action="https://fathomless-everglades-52108.herokuapp.com/monsters" method="post" enctype="multipart/form-data">
+              <fieldset>
+                <legend>Create Monster</legend>
+                <label>Name
+                  <input type="text" name="monster[name]">
+                </label>
+                <label>Description
+                  <input type="text" name="monster[description]">
+                </label>
+                <label>Price
+                  <input type="text" name="monster[price]">
+                </label>
+                <label>Image
+                  <input type="file" name="monster[file]">
+                </label>
+                <input type="submit" name="submit" value="Upload">
+              </fieldset>
+            </form>
+
+
+            <!-- Modal to update a monster -->
+           <div class="modal fade" id="update-monster-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+             <div class="modal-dialog" role="document">
+               <div class="modal-content">
+
+                 <div class="modal-header">
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                   <h4 class="modal-title" id="myModalLabel">Update monster</h4>
+                 </div>
+                 <div class="modal-body">
+                   <form class="form-block " id="update-monster">
+                     <div class="form-group">
+                       <legend>Description</legend>
+                       <textarea class="form-control" id="exampleTextarea" name="monster[description]" placeholder="description" rows="5"></textarea>
+                     </div>
+                     <div class="form-group">
+                       <legend>Name</legend>
+                     <input type="text" class="form-control" name="monster[name]" placeholder="name">
+                     </div>
+                     <div class="form-group">
+                       <legend>Price</legend>
+                     <input type="text" class="form-control" name="monster[price]" placeholder="price">
+                     </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success update-monster-btn" >Update monster</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="modal fade" id="delete-monster-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Are you sure you want to delele this monster?</h4>
+                  </div>
+                <div class="modal-body">
+                <div class="form-group">
+                  <button type="submit" data-dismiss="modal" class="btn btn-warning delete-monster-btn">Delete monster</button>
+                </div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    </body>
+</html>

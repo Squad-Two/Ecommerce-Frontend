@@ -1,0 +1,16 @@
+<div class="single-monster">
+  <img src={{monster.url}} width="200">
+  <br>
+  <br>
+  <p class="price"><b>PRICE:</b> ${{monster.price}} </p></b>
+  <p class="name"><b>NAME:</b> {{monster.name}} </p>
+  <p><b>DESCRIPTION:</b> {{monster.description}} <p>
+  <form id="form">
+    <fieldset>
+      <p><b>QUANTITY:</b> <input type="number" min="1" placeholder="1"></p>
+      <input type="text" style="display: none" value="{{monster.name}}">
+      <input type="number" style="display: none" value="{{monster.price}}">
+      <input type="text" style="display: none" value="{{monster._id}}">
+    </fieldset>
+  </form>
+</div>

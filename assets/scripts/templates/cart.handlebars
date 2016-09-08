@@ -1,0 +1,18 @@
+{{#each items}}
+
+    <div class="row" id="{{name}}">
+      <div class="col-md-3 cart">
+        <p>{{name}}</p>
+      </div>
+      <div class="col-md-3 cart">
+        <p>${{price}}</p>
+      </div>
+      <div class="col-md-3 cart">
+        <input class="quant" type="number" value={{quantity}}>
+      </div>
+      <div class="col-md-3 cart">
+        <button class="x" size="small">x</button>
+      </div><br>
+    </div>
+    
+{{/each}}
