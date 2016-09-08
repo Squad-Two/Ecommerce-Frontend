@@ -3,9 +3,9 @@
 
 
 const app = {
-  // api:  'https://floating-lowlands-70144.herokuapp.com/',
+  // api:  'https://floating-lowlands-70144.herokuapp.com',
     // api:  'http://localhost:3000',
-    api:  'https://floating-lowlands-70144.herokuapp.com/',
+    api:  'https://floating-lowlands-70144.herokuapp.com',
 
 };
 
