@@ -93,18 +93,18 @@ const onSignOut = function (event) {
 
 
 
-// load all monsters
+// load all prints
 const onPageLoad = function () {
-  api.getAllMonsters()
-     .done(ui.successMonsters)
+  api.getAllPrints()
+     .done(ui.successPrints)
      .fail(ui.failure);
 };
 
 
-//show a single monster
-const onShowMonster = function (id) {
-    api.showMonster(id)
-   .done(ui.successMonster)
+//show a single prints
+const onShowPrint = function (id) {
+    api.showPrint(id)
+   .done(ui.successPrint)
    .fail(ui.failure);
 };
 
@@ -115,7 +115,7 @@ const closeModalCart = function closeModalCart() {
 };
 
 
-// add monsters to cart
+// add prints to cart
 const onAddToCart = function (event) {
   event.preventDefault();
   let form = document.getElementById("form");
@@ -147,11 +147,11 @@ const showOrdersModal = function showOrdersModal(){
 };
 
 
-const uploadMonster = function (){
+const uploadPrints = function (){
   event.preventDefault();
   let data = new FormData(this);
     $.ajax({
-    url: 'https://fathomless-everglades-52108.herokuapp.com/monsters',
+    url: 'https://fathomless-everglades-52108.herokuapp.com/prints',
     method: 'POST',
     contentType: false,
     processData: false,
@@ -195,11 +195,11 @@ const addHandlers = () => {
   $(document).ready(onPageLoad);
 
 
-  //show a single monster when the monster is clicked
+  //show a single prints when the prints is clicked
   $(document).on('click', '.col-md-4', function(){
     let id = $(this).data('id');
     console.log(id);
-    onShowMonster(id);
+    onShowPrint(id);
   });
 
 
@@ -217,44 +217,44 @@ const addHandlers = () => {
   $('#sign-out1').on('click', closeModalSignOut);
 
   // aws ajax
-  $('#multipart-form-data').on('submit', uploadMonster);
+  $('#multipart-form-data').on('submit', uploadPrints);
 
 
-  // delete monster (data-id)
-  $('.delete-monster-btn').on('click', function (event) {
+  // delete prints (data-id)
+  $('.delete-prints-btn').on('click', function (event) {
      event.preventDefault();
-     let id = $(this).attr("data-monster-id");
-     api.deleteMonster(ui.deleteMonsterSuccess, ui.failure, id);
+     let id = $(this).attr("data-prints-id");
+     api.deletePrint(ui.deletePrintSuccess, ui.failure, id);
    });
 
 
-  //adds a monster id to the submit button
-  $('#admin').on('click', '.delete-monster', function(event){
+  //adds a prints id to the submit button
+  $('#admin').on('click', '.delete-prints', function(event){
     event.preventDefault();
-    let id = $(event.target).attr("data-monster-id");
-    $(".delete-monster-btn").attr("data-monster-id", id);
+    let id = $(event.target).attr("data-prints-id");
+    $(".delete-prints-btn").attr("data-prints-id", id);
   });
 
 
-  // update monster (data-id)
-  $('#update-monster').on('submit', function (event) {
+  // update prints (data-id)
+  $('#update-prints').on('submit', function (event) {
     event.preventDefault();
-    let id = $(".update-monster-btn").attr("data-monster-id");
+    let id = $(".update-prints-btn").attr("data-prints-id");
     let data = getFormFields(this);
-    api.updateMonster(ui.updateMonsterSuccess, ui.failure, data, id);
+    api.updatePrint(ui.updatePrintSuccess, ui.failure, data, id);
   });
 
   //adds a job id to the submit button
-  $('#admin').on('click', '.update-monster', function(event){
+  $('#admin').on('click', '.update-prints', function(event){
     event.preventDefault();
-    let id = $(event.target).attr("data-monster-id");
-    $(".update-monster-btn").attr("data-monster-id", id);
+    let id = $(event.target).attr("data-prints-id");
+    $(".update-prints-btn").attr("data-prints-id", id);
   });
 
 
-   //adds a monster id to the click button
-   $(".update-monster-btn").on('click', function () {
-   $("#update-monster-modal").hide();
+   //adds a prints id to the click button
+   $(".update-prints-btn").on('click', function () {
+   $("#update-prints-modal").hide();
    $(".modal-backdrop").hide();
    });
 

@@ -1,18 +1,18 @@
 
  {{#each this}}
- 
-      {{#each monsters}}
+
+      {{#each prints}}
 
       <div class="content">
         <img src="{{this.url}}" data-image-id="{{_id}}"alt="" />
-        <h5 class="monster-name1">{{name}}</h5>
-        <h5 class="monster-price1">${{price}}</h5>
-        <h5 class="monster-name1">{{description}}</h5>
+        <h5 class="print-name1">{{name}}</h5>
+        <h5 class="print-price1">${{price}}</h5>
+        <h5 class="print-name1">{{description}}</h5>
 
-        <button type="button" class="btn btn-warning delete-monster" data-monster-id="{{_id}}" data-toggle="modal" data-target="#delete-monster-modal">Delete</button>
+        <button type="button" class="btn btn-warning delete-print" data-print-id="{{_id}}" data-toggle="modal" data-target="#delete-print-modal">Delete</button>
         </div>
         <br>
-        <button type="button" class="btn btn-warning update-monster" data-monster-id="{{_id}}" data-toggle="modal" data-target="#update-monster-modal">Update</button>
+        <button type="button" class="btn btn-warning update-print" data-print-id="{{_id}}" data-toggle="modal" data-target="#update-print-modal">Update</button>
         </div>
         <br>
         <br>

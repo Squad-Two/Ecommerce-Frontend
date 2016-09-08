@@ -7,7 +7,7 @@ let cartObj = {
 };
 
 
-// are there monsters in cart
+// are there prints in cart
 let inCartStatus = "";
 const arr = cartObj.items;
 
@@ -26,7 +26,7 @@ const calculateTotal = function (val) {
 };
 
 
-// update total number of monsters
+// update total number of prints
 const updateTotal = function () {
   let itemTotal = [];
   arr.forEach(calculateTotal,itemTotal);
@@ -46,7 +46,7 @@ const populateCart = function (data) {
 const addItems = function () {
   let cartItem = [];
   inCartStatus = "";
-  //form is the form id for monsters that populates within handlebars.
+  //form is the form id for prints that populates within handlebars.
   let form = document.getElementById("form");
   for (let i = 1; i < 5; i++) {
        let field = form[i];

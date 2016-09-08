@@ -5,7 +5,7 @@
 const cartStorage = require('./cart_storage.js');
 
 
-// remove monsters from cart
+// remove prints from cart
 const onRemoveFromCart = function (event) {
   event.preventDefault();
   let targetName = $(this).parent().parent().attr('id');

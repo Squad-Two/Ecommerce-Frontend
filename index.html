@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Monster for hire</title>
+      <title>print for hire</title>
 
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
@@ -20,7 +20,7 @@
                  <span class="icon-bar"></span>
                  <span class="icon-bar"></span>
                </button>
-               <a class="navbar-brand"><b>Monster e-commerce</b></a>
+               <a class="navbar-brand"><b>print e-commerce</b></a>
              </div>
 
              <!-- Collect the nav links, forms, and other content for toggling -->
@@ -184,21 +184,21 @@
 
 
     <div class="jumbotron">
-      <h1 class="display-3 site-title">Monster For Hire</h1>
+      <h1 class="display-3 site-title">print For Hire</h1>
       <p class="lead title-description">This a place for parents to scare the discipline into their children.</p>
     </div>
 
 
 
-<!-- HANDLEBARS FOR MONSTERS -->
+<!-- HANDLEBARS FOR printS -->
             <div class="fluid-container">
              <!-- <div class="content" id="content"> -->
-               <div id="monsters">
+               <div id="prints">
 
                </div>
              <!-- </div> -->
            </div>
-<!-- END OF HANDLEBARS FOR MONSTERS -->
+<!-- END OF HANDLEBARS FOR printS -->
 
 
 
@@ -294,56 +294,56 @@
 
            <!-- admin panel -->
            <div id="admin">
-             <div id="all-monsters">
+             <div id="all-prints">
            </div>
 
 
-            <form id="multipart-form-data" action="https://fathomless-everglades-52108.herokuapp.com/monsters" method="post" enctype="multipart/form-data">
+            <form id="multipart-form-data" action="https://fathomless-everglades-52108.herokuapp.com/prints" method="post" enctype="multipart/form-data">
               <fieldset>
-                <legend>Create Monster</legend>
+                <legend>Create print</legend>
                 <label>Name
-                  <input type="text" name="monster[name]">
+                  <input type="text" name="print[name]">
                 </label>
                 <label>Description
-                  <input type="text" name="monster[description]">
+                  <input type="text" name="print[description]">
                 </label>
                 <label>Price
-                  <input type="text" name="monster[price]">
+                  <input type="text" name="print[price]">
                 </label>
                 <label>Image
-                  <input type="file" name="monster[file]">
+                  <input type="file" name="print[file]">
                 </label>
                 <input type="submit" name="submit" value="Upload">
               </fieldset>
             </form>
 
 
-            <!-- Modal to update a monster -->
-           <div class="modal fade" id="update-monster-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <!-- Modal to update a print -->
+           <div class="modal fade" id="update-print-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
              <div class="modal-dialog" role="document">
                <div class="modal-content">
 
                  <div class="modal-header">
                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                   <h4 class="modal-title" id="myModalLabel">Update monster</h4>
+                   <h4 class="modal-title" id="myModalLabel">Update print</h4>
                  </div>
                  <div class="modal-body">
-                   <form class="form-block " id="update-monster">
+                   <form class="form-block " id="update-print">
                      <div class="form-group">
                        <legend>Description</legend>
-                       <textarea class="form-control" id="exampleTextarea" name="monster[description]" placeholder="description" rows="5"></textarea>
+                       <textarea class="form-control" id="exampleTextarea" name="print[description]" placeholder="description" rows="5"></textarea>
                      </div>
                      <div class="form-group">
                        <legend>Name</legend>
-                     <input type="text" class="form-control" name="monster[name]" placeholder="name">
+                     <input type="text" class="form-control" name="print[name]" placeholder="name">
                      </div>
                      <div class="form-group">
                        <legend>Price</legend>
-                     <input type="text" class="form-control" name="monster[price]" placeholder="price">
+                     <input type="text" class="form-control" name="print[price]" placeholder="price">
                      </div>
                      <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-success update-monster-btn" >Update monster</button>
+                        <button type="submit" class="btn btn-success update-print-btn" >Update print</button>
                       </div>
                     </form>
                   </div>
@@ -353,16 +353,16 @@
 
 
 
-            <div class="modal fade" id="delete-monster-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal fade" id="delete-print-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Are you sure you want to delele this monster?</h4>
+                    <h4 class="modal-title" id="myModalLabel">Are you sure you want to delele this print?</h4>
                   </div>
                 <div class="modal-body">
                 <div class="form-group">
-                  <button type="submit" data-dismiss="modal" class="btn btn-warning delete-monster-btn">Delete monster</button>
+                  <button type="submit" data-dismiss="modal" class="btn btn-warning delete-print-btn">Delete print</button>
                 </div>
              </div>
           </div>

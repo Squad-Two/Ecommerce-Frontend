@@ -25,7 +25,7 @@ const app = require('../app.js');
 const getOrderSuccess = (data) => {
 
   app.orders = data.orders;
-  let previousOrders = "<table class = 'order-table'> <tr> <th>Date Purchased</th> <th>Monster</th> <th>Price</th> <th>Quantity</th> <th>Total</th> </tr>";
+  let previousOrders = "<table class = 'order-table'> <tr> <th>Date Purchased</th> <th>Print</th> <th>Price</th> <th>Quantity</th> <th>Total</th> </tr>";
     for (let i = 0; i < app.orders.length; i++) {
       //get the total for each order
       let currentTotal = app.orders[i].total;

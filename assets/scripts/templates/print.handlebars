@@ -1,0 +1,16 @@
+<div class="single-print">
+  <img src={{print.url}} width="200">
+  <br>
+  <br>
+  <p class="price"><b>PRICE:</b> ${{print.price}} </p></b>
+  <p class="name"><b>NAME:</b> {{print.name}} </p>
+  <p><b>DESCRIPTION:</b> {{print.description}} <p>
+  <form id="form">
+    <fieldset>
+      <p><b>QUANTITY:</b> <input type="number" min="1" placeholder="1"></p>
+      <input type="text" style="display: none" value="{{print.name}}">
+      <input type="number" style="display: none" value="{{print.price}}">
+      <input type="text" style="display: none" value="{{print._id}}">
+    </fieldset>
+  </form>
+</div>

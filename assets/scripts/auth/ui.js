@@ -51,20 +51,20 @@ this.reset();
 
 
 // handlebars for all uploads for admin page
-let displayUploads = function(monsters){
+let displayUploads = function(prints){
   let picturesListingTemplate = require('../templates/pictures.handlebars');
-  $('#all-monsters').empty();
+  $('#all-prints').empty();
   // append content from GET request using handlebars
-  $('#all-monsters').append(picturesListingTemplate({
-    monsters
+  $('#all-prints').append(picturesListingTemplate({
+    prints
   }));
 };
 
 
 const showPicturesSuccess = (data) => {
-  app.monsters = data.monsters;
+  app.prints = data.prints;
   displayUploads(data);
-  console.log(app.monsters);
+  console.log(app.prints);
 };
 
 
@@ -83,7 +83,7 @@ const signInSuccess = (data) => {
   console.log(app.user.admin);
 
    if(app.user.admin === true){
-       $('.jumbotron, #monsters, #cart-modal-link, #sign-up-modal-link, #sign-in-modal-link, #orders-modal-link').hide();
+       $('.jumbotron, #prints, #cart-modal-link, #sign-up-modal-link, #sign-in-modal-link, #orders-modal-link').hide();
        $('#admin, #multipart-form-data, .content').show();
          api.getAllPictures(showPicturesSuccess, failure);
    }
@@ -99,24 +99,24 @@ const signOutSuccess = () => {
 };
 
 
-// show all monsters on main page, handlebars
-const successMonsters = (monsters) => {
-   $('#monsters').empty();
-   let displayAllMonsters = require('../templates/display-all-monsters.handlebars');
-   $('#monsters').append(displayAllMonsters(monsters));
+// show all prints on main page, handlebars
+const successPrints = (prints) => {
+   $('#prints').empty();
+   let displayAllPrints = require('../templates/display-all-prints.handlebars');
+   $('#prints').append(displayAllPrints(prints));
 };
 
 
-// show one monster in modal, handlebars
-const successMonster = (monster) => {
-  let oneMonster = require('../templates/monster.handlebars');
+// show one print in modal, handlebars
+const successPrint = (print) => {
+  let onePrint = require('../templates/print.handlebars');
   $('#item').modal('show');
-  $('#item-add').empty().append(oneMonster(monster));
+  $('#item-add').empty().append(onePrint(print));
 };
 
 
 // delete
-const deleteMonsterSuccess = (data) => {
+const deletePrintSuccess = (data) => {
   console.log(data);
   displayUploads();
   // fire ajax if delete was successful and delete if on the front end
@@ -125,9 +125,9 @@ const deleteMonsterSuccess = (data) => {
 
 
 // update
-const updateMonsterSuccess = (data) => {
+const updatePrintSuccess = (data) => {
   console.log(data);
-  console.log("Monster was updated!");
+  console.log("Art was updated!");
   // fire ajax if update was successful and show jobs on the front end
   api.getAllPictures(showPicturesSuccess, failure);
 };
@@ -139,12 +139,12 @@ module.exports = {
   signInSuccess,
   signOutSuccess,
   onSuccess,
-  successMonster,
+  successPrint,
   app,
   failureSignIn,
-  successMonsters,
+  successPrints,
   uploadSuccess,
   showPicturesSuccess,
-  deleteMonsterSuccess,
-  updateMonsterSuccess
+  deletePrintSuccess,
+  updatePrintSuccess
 };

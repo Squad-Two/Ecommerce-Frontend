@@ -39,24 +39,24 @@ const signOut = () => $.ajax({
 });
 
 
-// show all monsters on main page
+// show all prints on main page
 const getAllMonsters = () => $.ajax({
-  url: app.api + '/monsters/',
+  url: app.api + '/prints/',
   method: 'GET',
 });
 
 
 // show single monster in modal
 const showMonster = (id) => $.ajax({
-  url: app.api + '/monsters/' + id,
+  url: app.api + '/prints/' + id,
     method: 'GET',
 });
 
 
-// get all monsters for Admin panel
+// get all prints for Admin panel
 const getAllPictures = (success, failure) => {
   return $.ajax({
-    url: app.api + '/monsters',
+    url: app.api + '/prints',
     method: "GET",
     headers: {
       Authorization: 'Token token=' + app.user.token,
@@ -70,7 +70,7 @@ const getAllPictures = (success, failure) => {
 // delete monster
 const deleteMonster = (success, failure, id) => {
   $.ajax({
-    url: app.api + '/monsters/' + id,
+    url: app.api + '/prints/' + id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + app.user.token,
@@ -85,7 +85,7 @@ const deleteMonster = (success, failure, id) => {
 const updateMonster = (success, failure, data, id) => {
   $.ajax({
     method: "PATCH",
-    url: app.api + '/monsters/' + id,
+    url: app.api + '/prints/' + id,
     data,
     headers: {
       Authorization: 'Token token='+ app.user.token,

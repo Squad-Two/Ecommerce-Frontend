@@ -3,8 +3,8 @@
 
 
 const app = {
-  api:  'https://fathomless-everglades-52108.herokuapp.com',
-    // api:  'http://localhost:3000',
+  // api:  'https://fathomless-everglades-52108.herokuapp.com',
+    api:  'http://localhost:3000',
 };
 
 module.exports = app;
