@@ -83,12 +83,13 @@ const signInSuccess = (data) => {
   console.log(app.user.admin);
 
    if(app.user.admin === true){
-       $('.jumbotron, #prints, #cart-modal-link, #sign-up-modal-link, #sign-in-modal-link, #orders-modal-link').hide();
+       $('.jumbotron, #prints, #cart-modal-link, #sign-up-modal-link, #sign-in-modal-link, #orders-modal-link, footer, #latest').hide();
        $('#admin, #multipart-form-data, .content').show();
          api.getAllPictures(showPicturesSuccess, failure);
    }
   $('.sign-in-warn').hide();
   $('#checkout-button').show();
+    $('#change-password-modal-link, #sign-out-modal-link, #cart-modal-link, #orders-modal-link').show();
 };
 
 

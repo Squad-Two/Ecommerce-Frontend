@@ -15,4 +15,6 @@ $(  () => {
   stripeEvents.addHandlers();
   orderEvents.addHandlers();
   $('#multipart-form-data, #admin').hide();
+
+  $('#change-password-modal-link, #sign-out-modal-link, #cart-modal-link, #orders-modal-link').hide();
 });

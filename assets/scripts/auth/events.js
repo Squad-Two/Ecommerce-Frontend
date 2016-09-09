@@ -151,7 +151,9 @@ const uploadPrints = function (){
   event.preventDefault();
   let data = new FormData(this);
     $.ajax({
-    url: 'https://floating-lowlands-70144.herokuapp.com/prints',
+
+    url: 'http://localhost:3000/prints',
+    // url: 'https://floating-lowlands-70144.herokuapp.com/prints',
     method: 'POST',
     contentType: false,
     processData: false,
@@ -196,7 +198,7 @@ const addHandlers = () => {
 
 
   //show a single prints when the prints is clicked
-  $(document).on('click', '.col-md-4', function(){
+  $(document).on('click', '.col-md-3', function(){
     let id = $(this).data('id');
     console.log(id);
     onShowPrint(id);
