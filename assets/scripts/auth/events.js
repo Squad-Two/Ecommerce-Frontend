@@ -198,7 +198,7 @@ const addHandlers = () => {
 
 
   //show a single prints when the prints is clicked
-  $(document).on('click', '.col-md-3', function(){
+  $(document).on('click', '.hero-feature', function(){
     let id = $(this).data('id');
     console.log(id);
     onShowPrint(id);

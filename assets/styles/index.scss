@@ -17,7 +17,15 @@ body {
   background-color: #E0E0E0 ;
 }
 
+.thumbnail {
+  height: 800px;
+  max-height: 800px;
+}
 
+.hero-feature {
+  height: 800px;
+  margin-bottom: 20px;
+}
 
 #item {
     text-align: center;
@@ -26,6 +34,7 @@ body {
 .hero-feature {
   height: 400px;
 }
+
 
 
 // <img src="http://i.imgur.com/XLHdUex.png" width="1140px" height="239px" alt="" />
