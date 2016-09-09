@@ -30,12 +30,10 @@ const onCheckout = (event) => {
   if (!app.user || currentOrder.order.total === 0) {
     return;
   }
-  let data = currentOrder;
-
   handler.open({
     name: 'Art',
     closed: function() {
-      api.changePaidStatus().then(ui.changePaidStatusSuccess).catch(ui.failure);
+      // api.changePaidStatus().then(ui.changePaidStatusSuccess).catch(ui.failure);
     },
     amount: currentOrder.order.total * 100
   });
