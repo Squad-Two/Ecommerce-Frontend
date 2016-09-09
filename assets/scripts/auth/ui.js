@@ -87,7 +87,7 @@ const signInSuccess = (data) => {
        $('#admin, #multipart-form-data, .content').show();
          api.getAllPictures(showPicturesSuccess, failure);
    }
-  $('.sign-in-warn').hide();
+  $('.sign-in-warn, #orders-modal-link, #orders-modal-link').hide();
   $('#checkout-button').show();
     $('#change-password-modal-link, #sign-out-modal-link, #cart-modal-link, #orders-modal-link').show();
 };
