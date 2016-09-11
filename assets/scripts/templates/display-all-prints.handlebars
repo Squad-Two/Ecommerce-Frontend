@@ -1,4 +1,4 @@
-{{#each prints}}
+<!-- {{#each prints}}
 
  <div id="print" data-id={{_id}} class="col-md-4 img" data-toggle="modal" data-target="#item" height="260px">
    <img  class="print-images" src="{{url}}"  height="400" width="100%" />
@@ -6,4 +6,29 @@
    <h5 class="print-price">${{price}}</h5>
  </div>
 
+{{/each}} -->
+
+
+{{#each prints}}
+
+ <div id="hero" class="col-md-4 hero-feature" data-id={{_id}} data-toggle="modal" data-target="#item" >
+   <div class="thumbnail" >
+       <img id="first-page"  src="{{url}}" alt="">
+       <div class="caption">
+           <h3>{{name}}</h3>
+           <h4>${{price}}</h4>
+       </div>
+     </div>
+ </div>
+
+
 {{/each}}
+
+<!-- <div class="col-md-3 col-sm-6 hero-feature">
+    <div class="thumbnail">
+        <img src="http://placehold.it/800x500" alt="">
+        <div class="caption">
+            <h3>Feature Label</h3>
+        </div>
+    </div>
+</div> -->
