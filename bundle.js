@@ -2072,6 +2072,7 @@ webpackJsonp([0],[
 	      stripeToken: _token.id,
 	      amount: currentOrder.order.total * 100
 	    };
+	    api.createOrder(currentOrder).then(ui.createOrderSuccess).catch(ui.failure);
 	    api.addStripeCharge(credentials).then(ui.success).catch(ui.failure);
 	  }
 	});
@@ -2081,12 +2082,14 @@ webpackJsonp([0],[
 	  if (!app.user || currentOrder.order.total === 0) {
 	    return;
 	  }
-	  var data = currentOrder;
-	  api.createOrder(data).then(ui.createOrderSuccess).catch(ui.failure);
+	  // let data = currentOrder;
+	  // api.createOrder(data)
+	  //   .then(ui.createOrderSuccess)
+	  //   .catch(ui.failure);
 	  handler.open({
 	    name: 'Art',
 	    closed: function closed() {
-	      api.changePaidStatus().then(ui.changePaidStatusSuccess).catch(ui.failure);
+	      // api.changePaidStatus().then(ui.changePaidStatusSuccess).catch(ui.failure);
 	    },
 	    amount: currentOrder.order.total * 100
 	  });
