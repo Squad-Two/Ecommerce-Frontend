@@ -45,10 +45,10 @@ const addStripeCharge = (data) => {
 };
 
 
-const changePaidStatus = () => {
+const changePaidStatus = (id) => {
   return new Promise((resolve, reject) => {
     return $.ajax({
-      url: app.api + '/orders/' + app.order._id,
+      url: app.api + '/orders/' + id,
       method: "PATCH",
       headers: {
         Authorization: 'Token token=' + app.user.token,
