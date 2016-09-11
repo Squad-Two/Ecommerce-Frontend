@@ -2,7 +2,7 @@
 
 
 const app = require('../app.js');
-
+const stripeApi = require('./stripe_api');
 
 const success = (data) => {
   if (data) {
@@ -15,15 +15,19 @@ const failure = (error) => {
   console.log(error);
 };
 
-
-const createOrderSuccess = (response) => {
-  app.order = response.order;
-};
-
-
 const changePaidStatusSuccess = (response) => {
   console.log(response);
 };
+
+const createOrderSuccess = (response) => {
+  app.order = response.order;
+  console.log(response.order._id);
+  let id = response.order._id;
+  stripeApi.changePaidStatus(id).then(changePaidStatusSuccess).catch(failure);
+};
+
+
+
 
 
 module.exports = {
