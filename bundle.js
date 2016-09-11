@@ -1734,8 +1734,7 @@ webpackJsonp([0],[
 	'use strict';
 
 	var app = {
-	  // api:  'https://floating-lowlands-70144.herokuapp.com',
-	  // api:  'https://floatisng-lowlands-70144.herokuapp.com',
+	  // api: 'http://localhost:3000,'
 	  api: 'https://floatisng-lowlands-70144.herokuapp.com'
 
 	};
@@ -2152,10 +2151,10 @@ webpackJsonp([0],[
 	  });
 	};
 
-	var changePaidStatus = function changePaidStatus() {
+	var changePaidStatus = function changePaidStatus(id) {
 	  return new Promise(function (resolve, reject) {
 	    return $.ajax({
-	      url: app.api + '/orders/' + app.order._id,
+	      url: app.api + '/orders/' + id,
 	      method: "PATCH",
 	      headers: {
 	        Authorization: 'Token token=' + app.user.token
@@ -2189,6 +2188,7 @@ webpackJsonp([0],[
 	'use strict';
 
 	var app = __webpack_require__(27);
+	var stripeApi = __webpack_require__(34);
 
 	var success = function success(data) {
 	  if (data) {} else {}
@@ -2198,12 +2198,15 @@ webpackJsonp([0],[
 	  console.log(error);
 	};
 
-	var createOrderSuccess = function createOrderSuccess(response) {
-	  app.order = response.order;
-	};
-
 	var changePaidStatusSuccess = function changePaidStatusSuccess(response) {
 	  console.log(response);
+	};
+
+	var createOrderSuccess = function createOrderSuccess(response) {
+	  app.order = response.order;
+	  console.log(response.order._id);
+	  var id = response.order._id;
+	  stripeApi.changePaidStatus(id).then(changePaidStatusSuccess).catch(failure);
 	};
 
 	module.exports = {
