@@ -183,14 +183,8 @@ const addHandlers = () => {
 
 
   $('#sign-out-modal-link').on('click', showSignOutModal);
-  $('#sign-out').on('submit', onSignOut);
-  $('#sign-out1').on('click', closeModalSignOut);
 
-
-  $("#sign-out1").on('click', function () {
-  $('#table, #create-job-modal-link').hide();
-          location.reload();
-});
+$('#sign-out1').on('submit', onSignOut);
 
 
   //displays all products upon page load
@@ -198,7 +192,7 @@ const addHandlers = () => {
 
 
   //show a single prints when the prints is clicked
-  $(document).on('click', '.col-md-3', function(){
+  $(document).on('click', '.col-md-4', function(){
     let id = $(this).data('id');
     console.log(id);
     onShowPrint(id);

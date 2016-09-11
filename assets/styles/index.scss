@@ -32,6 +32,15 @@ body {
   width: 40%;
 }
 
+#hero {
+    width: 50%;
+}
+
+#first-page {
+  height: 500px;
+  margin-top: 40px;
+}
+
 
 // <img src="http://i.imgur.com/XLHdUex.png" width="1140px" height="239px" alt="" />
 
@@ -149,18 +158,29 @@ body {
 // }
 //
 //
-// .order-table {
-//  width: 100%;
-//  border-collapse: collapse;
-//  text-align: center;
-// }
-//
-// td, th {
-//
-//  padding: 6px;
-//  border: 1px solid #ccc;
-//  text-align: center;
-// }
+.order-table {
+ width: 100%;
+ border-collapse: collapse;
+ text-align: center;
+}
+
+td, th {
+
+ padding: 6px;
+ border: 1px solid #ccc;
+ text-align: center;
+}
+
+tr:nth-of-type(odd) {
+  background: #F5F6CE;
+}
+
+p {
+    margin: 0 0 10px;
+    font-size: 15px;
+    line-height: 25px;
+}
+
 //
 // #previous-orders {
 //   max-height: 200px;

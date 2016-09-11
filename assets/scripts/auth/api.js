@@ -39,6 +39,9 @@ const signOut = () => $.ajax({
 });
 
 
+
+
+
 // show all prints on main page
 const getAllPrints = () => $.ajax({
   url: app.api + '/prints/',
