@@ -152,7 +152,7 @@ const uploadPrints = function (){
   let data = new FormData(this);
     $.ajax({
 
-    url: 'http://localhost:3000/prints',
+    url: 'https://floatisng-lowlands-70144.herokuapp.com/prints',
     // url: 'https://floating-lowlands-70144.herokuapp.com/prints',
     method: 'POST',
     contentType: false,
