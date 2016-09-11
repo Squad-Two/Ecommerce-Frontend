@@ -41,6 +41,13 @@ body {
   margin-top: 40px;
 }
 
+@media (max-width: 966px) {
+  #prints, #hero {
+    width: 100%;
+  }
+
+}
+
 
 // <img src="http://i.imgur.com/XLHdUex.png" width="1140px" height="239px" alt="" />
 
