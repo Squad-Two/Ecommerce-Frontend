@@ -89,7 +89,7 @@ const signInSuccess = (data) => {
    }
   $('.sign-in-warn, #orders-modal-link, #orders-modal-link').hide();
   $('#checkout-button').show();
-    $('#change-password-modal-link, #sign-out-modal-link, #cart-modal-link, #orders-modal-link').show();
+  $('#change-password-modal-link, #sign-out-modal-link, #cart-modal-link, #orders-modal-link').show();
 };
 
 
@@ -97,7 +97,7 @@ const signInSuccess = (data) => {
 const signOutSuccess = () => {
   console.log('You signed out succesfully!');
   delete app.user;
-  $("#change-password-modal-link, #cart-modal-link, #orders-modal-link").hide();
+  $("#change-password-modal-link, #cart-modal-link, #orders-modal-link, #sign-out-modal-link").hide();
   $("#sign-in-modal-link, #sign-up-modal-link").show();
 };
 
