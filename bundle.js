@@ -180,7 +180,7 @@ webpackJsonp([0],[
 	  var data = new FormData(this);
 	  $.ajax({
 
-	    url: 'https://floatisng-lowlands-70144.herokuapp.com/prints',
+	    url: 'https://floating-lowlands-70144.herokuapp.com/prints',
 	    // url: 'https://floating-lowlands-70144.herokuapp.com/prints',
 	    method: 'POST',
 	    contentType: false,
