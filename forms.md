@@ -13,7 +13,7 @@ The object returned can be used to validate the form data.
 'use strict';
 
 const ajaxDefaults = {
-  url: 'https://floatisng-lowlands-70144.herokuapp.com',
+  url: 'https://floating-lowlands-70144.herokuapp.com',
 };
 
 const myRequest = (data, success, fail) => {
