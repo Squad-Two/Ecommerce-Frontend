@@ -39,8 +39,8 @@ https://classic.moqups.com/peic.natasa@gmail.com/77a4JFu3/p:ab13330f2
 
 ## Time Table
 
-wireframes/user-stories
-Backend (Express.js)
-AWS S3
-Frontend (HTML, CSS, Bootstrap, jQuery)
-AJAX
+- wireframes/user-stories
+- Backend (Express.js)
+- AWS S3
+- Frontend (HTML, CSS, Bootstrap, jQuery)
+- AJAX
