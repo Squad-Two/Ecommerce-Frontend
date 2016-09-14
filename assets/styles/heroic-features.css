@@ -19,3 +19,7 @@ body {
 footer {
     margin: 50px 0;
 }
+
+#change-password-modal-link, #sign-out-modal-link, #cart-modal-link, #orders-modal-link {
+   display: block;
+}
