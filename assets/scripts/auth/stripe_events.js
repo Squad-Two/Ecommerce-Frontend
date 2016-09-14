@@ -10,19 +10,19 @@ let currentOrder = {
   "order": cart.cartObj
 };
 
+  let handler = StripeCheckout.configure({
+    key: 'pk_test_cMvUIbtaYpnRoAAdrjFX246D',
+    locale: 'auto',
+    token: function(token) {
+      let credentials = {
+        stripeToken: token.id,
+        amount: currentOrder.order.total * 100
+      };
+      api.createOrder(currentOrder).then(ui.createOrderSuccess).catch(ui.failure);
+      api.addStripeCharge(credentials).then(ui.success).catch(ui.failure);
+    }
+  });
 
-let handler = StripeCheckout.configure({
-  key: 'pk_test_cMvUIbtaYpnRoAAdrjFX246D',
-  locale: 'auto',
-  token: function(token) {
-    let credentials = {
-      stripeToken: token.id,
-      amount: currentOrder.order.total * 100
-    };
-    api.createOrder(currentOrder).then(ui.createOrderSuccess).catch(ui.failure);
-    api.addStripeCharge(credentials).then(ui.success).catch(ui.failure);
-  }
-});
 
 
 const onCheckout = (event) => {
@@ -36,10 +36,10 @@ const onCheckout = (event) => {
   //   .catch(ui.failure);
   handler.open({
     name: 'Art',
-    closed: function() {
-      // api.changePaidStatus().then(ui.changePaidStatusSuccess).catch(ui.failure);
-    },
-    amount: currentOrder.order.total * 100
+    // closed: function() {
+    //   api.changePaidStatus().then(ui.changePaidStatusSuccess).catch(ui.failure);
+    // },
+    // amount: currentOrder.order.total * 100
   });
 };
 
