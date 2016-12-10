@@ -3,6 +3,7 @@
 
 const getFormFields = require(`../../../lib/get-form-fields`);
 
+const app = require('../app');
 const cartStorage = require('./cart_storage');
 const api = require('./api');
 const ui = require('./ui');
@@ -152,8 +153,7 @@ const uploadPrints = function (){
   let data = new FormData(this);
     $.ajax({
 
-    url: 'https://floating-lowlands-70144.herokuapp.com/prints',
-    // url: 'https://floating-lowlands-70144.herokuapp.com/prints',
+    url: app.api + '/prints',
     method: 'POST',
     contentType: false,
     processData: false,
